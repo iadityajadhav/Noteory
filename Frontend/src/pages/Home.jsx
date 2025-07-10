@@ -22,6 +22,7 @@ function Home() {
     try {
       const response = await fetch('https://noteory-api.vercel.app/api/notes', {
         headers: {
+          'Content-Type': 'application/json',
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
       })
