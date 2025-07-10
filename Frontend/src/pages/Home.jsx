@@ -20,7 +20,7 @@ function Home() {
 
   const fetchNotes = async () => {
     try {
-      const response = await fetch('https://noteory-api.vercel.app/api/notes', {
+      const response = await fetch('https://noteory-api.vercel.app/auth/notes', {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -48,7 +48,7 @@ function Home() {
 
   const handleAddNote = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/notes', {
+      const response = await fetch('https://noteory-api.vercel.app/api/notes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ function Home() {
 
   const handleUpdateNote = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/notes/${editNoteId}`, {
+      const response = await fetch(`https://noteory-api.vercel.app/api/notes/${editNoteId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ function Home() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/notes/${id}`, {
+      const response = await fetch(`https://noteory-api.vercel.app/api/notes/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
