@@ -18,7 +18,7 @@ function Login() {
     if (!email || !password) return handleError('Email and password are required')
 
     try {
-      const response = await fetch('http://localhost:3000/auth/login', {
+      const response = await fetch('https://noteory-api.vercel.app/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginInfo)
