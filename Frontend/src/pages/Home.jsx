@@ -20,7 +20,7 @@ function Home() {
 
   const fetchNotes = async () => {
     try {
-      const response = await fetch('https://noteory-api.vercel.app/auth/notes', {
+      const response = await fetch('https://noteory-api.vercel.app/api/notes', {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
